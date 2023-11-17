@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "FluDo"
+version = "0.1.0"
+description = ""
+authors = ["Michal Fluder <fludermichal@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.103.2"
+uvicorn = "^0.23.2"
+pydantic = "^2.4.2"
+pydantic-settings = "^2.0.3"
+tortoise-orm = "^0.20.0"
+aerich = "^0.7.2"
+asyncpg = "^0.28.0"
+python-multipart = "^0.0.6"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.10.1"
+isort = "^5.12.0"
+pycln = "^2.3.0"
+pre-commit = "^3.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 99
+
+[tool.pycln]
+all = true
+
+[tool.isort]
+line_length = 99
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
